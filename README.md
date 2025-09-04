@@ -1,4 +1,3 @@
-````markdown
 # Dashboard Dana Sekolah Indonesia
 
 Aplikasi **fullstack** yang berfungsi sebagai **dashboard interaktif** untuk memantau jumlah pendanaan sekolah di seluruh Indonesia, dari PAUD hingga SMA. Aplikasi ini menampilkan data secara visual dan memudahkan analisis distribusi anggaran pendidikan antar provinsi.
@@ -29,7 +28,7 @@ Aplikasi **fullstack** yang berfungsi sebagai **dashboard interaktif** untuk mem
    git clone <URL_REPOSITORY_ANDA>
    cd <NAMA_FOLDER_PROJECT>
    npm install
-````
+
 
 2. **Konfigurasi Environment**
 
