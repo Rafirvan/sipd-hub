@@ -1,0 +1,189 @@
+{
+  "id": "d84ff86c-c6f9-460c-b2ea-a8c6fae170c7",
+  "prevId": "bc99ca78-53da-47ed-98e0-3cdcb9290e60",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.budget_revisions": {
+      "name": "budget_revisions",
+      "schema": "",
+      "columns": {
+        "region_id": {
+          "name": "region_id",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "anggaran_rev_paud": {
+          "name": "anggaran_rev_paud",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "anggaran_rev_sd": {
+          "name": "anggaran_rev_sd",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "anggaran_rev_smp": {
+          "name": "anggaran_rev_smp",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "anggaran_rev_sma": {
+          "name": "anggaran_rev_sma",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_anggaran_rev": {
+          "name": "total_anggaran_rev",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "budget_revisions_region_id_regions_id_fk": {
+          "name": "budget_revisions_region_id_regions_id_fk",
+          "tableFrom": "budget_revisions",
+          "tableTo": "regions",
+          "columnsFrom": [
+            "region_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.regions": {
+      "name": "regions",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "kode_pro": {
+          "name": "kode_pro",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "kode_kab": {
+          "name": "kode_kab",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nama_wilayah": {
+          "name": "nama_wilayah",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tingkat_label": {
+          "name": "tingkat_label",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.school_revisions": {
+      "name": "school_revisions",
+      "schema": "",
+      "columns": {
+        "region_id": {
+          "name": "region_id",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "jml_rev_paud": {
+          "name": "jml_rev_paud",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "jml_rev_sd": {
+          "name": "jml_rev_sd",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "jml_rev_smp": {
+          "name": "jml_rev_smp",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "jml_rev_sma": {
+          "name": "jml_rev_sma",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_jml_rev_sekolah": {
+          "name": "total_jml_rev_sekolah",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "school_revisions_region_id_regions_id_fk": {
+          "name": "school_revisions_region_id_regions_id_fk",
+          "tableFrom": "school_revisions",
+          "tableTo": "regions",
+          "columnsFrom": [
+            "region_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

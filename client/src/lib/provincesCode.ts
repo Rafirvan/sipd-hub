@@ -1,0 +1,46 @@
+import {toSentenceCase} from "@/lib/toSentenceCase.ts";
+
+export const provincesCode = [
+    { kodePro: "63", namaProvinsi: "KALIMANTAN SELATAN" },
+    { kodePro: "71", namaProvinsi: "SULAWESI UTARA" },
+    { kodePro: "62", namaProvinsi: "KALIMANTAN TENGAH" },
+    { kodePro: "72", namaProvinsi: "SULAWESI TENGAH" },
+    { kodePro: "75", namaProvinsi: "GORONTALO" },
+    { kodePro: "12", namaProvinsi: "SUMATERA UTARA" },
+    { kodePro: "96", namaProvinsi: "PAPUA BARAT DAYA" },
+    { kodePro: "13", namaProvinsi: "SUMATERA BARAT" },
+    { kodePro: "15", namaProvinsi: "JAMBI" },
+    { kodePro: "52", namaProvinsi: "NUSA TENGGARA BARAT" },
+    { kodePro: "93", namaProvinsi: "PAPUA SELATAN" },
+    { kodePro: "73", namaProvinsi: "SULAWESI SELATAN" },
+    { kodePro: "19", namaProvinsi: "KEPULAUAN BANGKA BELITUNG" },
+    { kodePro: "81", namaProvinsi: "MALUKU" },
+    { kodePro: "65", namaProvinsi: "KALIMANTAN UTARA" },
+    { kodePro: "94", namaProvinsi: "PAPUA TENGAH" },
+    { kodePro: "14", namaProvinsi: "RIAU" },
+    { kodePro: "95", namaProvinsi: "PAPUA PEGUNUNGAN" },
+    { kodePro: "91", namaProvinsi: "PAPUA" },
+    { kodePro: "64", namaProvinsi: "KALIMANTAN TIMUR" },
+    { kodePro: "34", namaProvinsi: "DAERAH ISTIMEWA YOGYAKARTA" },
+    { kodePro: "18", namaProvinsi: "LAMPUNG" },
+    { kodePro: "32", namaProvinsi: "JAWA BARAT" },
+    { kodePro: "76", namaProvinsi: "SULAWESI BARAT" },
+    { kodePro: "74", namaProvinsi: "SULAWESI TENGGARA" },
+    { kodePro: "21", namaProvinsi: "KEPULAUAN RIAU" },
+    { kodePro: "33", namaProvinsi: "JAWA TENGAH" },
+    { kodePro: "17", namaProvinsi: "BENGKULU" },
+    { kodePro: "35", namaProvinsi: "JAWA TIMUR" },
+    { kodePro: "61", namaProvinsi: "KALIMANTAN BARAT" },
+    { kodePro: "92", namaProvinsi: "PAPUA BARAT" },
+    { kodePro: "51", namaProvinsi: "BALI" },
+    { kodePro: "53", namaProvinsi: "NUSA TENGGARA TIMUR" },
+    { kodePro: "36", namaProvinsi: "BANTEN" },
+    { kodePro: "31", namaProvinsi: "DKI JAKARTA" },
+    { kodePro: "11", namaProvinsi: "ACEH" },
+    { kodePro: "82", namaProvinsi: "MALUKU UTARA" },
+    { kodePro: "16", namaProvinsi: "SUMATERA SELATAN" },
+]
+
+export function findProvinceName(code:string): string {
+   return toSentenceCase(provincesCode.find(item => item.kodePro === code)?.namaProvinsi)
+}
