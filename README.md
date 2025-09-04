@@ -1,69 +1,90 @@
-# React + TypeScript + Vite
+Got it! Here's a clean and professional README in **Indonesian** with your full specs:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+````markdown
+# Dashboard Dana Sekolah Indonesia
 
-Currently, two official plugins are available:
+Aplikasi **fullstack** yang berfungsi sebagai **dashboard interaktif** untuk memantau jumlah pendanaan sekolah di seluruh Indonesia, dari PAUD hingga SMA. Aplikasi ini menampilkan data secara visual dan memudahkan analisis distribusi anggaran pendidikan antar provinsi.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Teknologi yang Digunakan
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Backend:**
+- Node.js
+- Express
+- Drizzle ORM
+- PostgreSQL
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Frontend:**
+- React
+- TypeScript
+- Tailwind CSS
+- Axios
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Cara Menjalankan
+
+1. **Clone Repository**
+   
+   ```bash
+   git clone <URL_REPOSITORY_ANDA>
+   cd <NAMA_FOLDER_PROJECT>
+   npm install
+````
+
+2. **Konfigurasi Environment**
+
+   Buat file `.env` di dalam folder `server/` dan isi dengan URL koneksi database PostgreSQL:
+
+   ```env
+   DATABASE_URL=postgresql://username:password@localhost:5432/nama_database
+   ```
+
+3. **Menjalankan Aplikasi**
+
+   **Pilihan 1 – Jalankan server dan client secara terpisah:**
+
+   ```bash
+   # Jalankan backend
+   cd server
+   npm run dev
+
+   # Jalankan frontend di terminal lain
+   cd ../client
+   npm run dev
+   ```
+
+   **Pilihan 2 – Jalankan dari root folder (jika sudah diatur script concurrently):**
+
+   ```bash
+   npm run dev
+   ```
+
+   > Catatan: Backend akan berjalan di `localhost:3001` dan frontend di `localhost:5173` atau `5174`. Pastikan port ini sesuai agar CORS tidak bermasalah.
+
+---
+
+## Fitur Utama
+
+* Menampilkan jumlah pendanaan sekolah dari PAUD hingga SMA.
+* Dashboard interaktif dengan chart dan tabel.
+* Filter data berdasarkan provinsi.
+* Visualisasi anggaran pendidikan untuk analisis cepat dan mudah.
+
+---
+
+## Struktur Folder
+
+```
+root/
+├─ client/      # Frontend React
+├─ server/      # Backend Node + Express
+└─ README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+
