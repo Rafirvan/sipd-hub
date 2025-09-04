@@ -1,5 +1,3 @@
-Got it! Here's a clean and professional README in **Indonesian** with your full specs:
-
 ````markdown
 # Dashboard Dana Sekolah Indonesia
 
